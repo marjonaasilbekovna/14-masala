@@ -1,20 +1,13 @@
 x=int(input())
-s=0
-n=0
-if x==0:
-    s=-1
+a=""
+if x<10:
+    a="000"
+elif x<100:
+    a="00"
+elif x<1000:
+    a="0"
+if x%400==0 or x%4==0 and x%100!=0:
+    a=f"12/09/{a+str(x)}"
 else:
-    if x<0:
-        n=-x
-    else:
-        n=x
-    i=1
-    while i*i<=n:
-        if n%i==0:
-            s+=1
-            if i*i!=n:
-                s+=1
-        i+=1
-    if s%2 and x>0:
-        s+=1
-print(s)
+    a=f"13/09/{a+str(x)}"
+print(a)
