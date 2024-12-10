@@ -1,8 +1,7 @@
-N = int(input())
-elements = list(map(int, input().split()))
-
-n = 0
-
-for num in elements:
-    n ^= num 
-print(n)
+n=int(input())
+a,b,c=map(int,input().split())
+m=(a+b+c)
+if n<m:
+  print("Yes")
+else:
+  print("No")
